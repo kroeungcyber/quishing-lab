@@ -1,0 +1,6 @@
+# qr_phishing.rules - Suricata IDS rules for detecting QR code phishing activity
+
+# Example rule: Detect HTTP requests to known phishing server (replace with your lab IP)
+alert http any any -> any any (msg:"Quishing Lab: Access to phishing server"; content:"Host: "; content:"<LAB_PHISHING_SERVER_IP>"; http_header; sid:1000001; rev:1;)
+
+# Add more rules as needed for your lab scenarios.
